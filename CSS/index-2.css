@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body, main {
+body, header ,main {
     background-color: #5B2386;
     display: flex;
     flex-direction: column;
@@ -10,31 +10,68 @@ body, main {
     font-size: 24px;
 }
 
-header .header-first-img {
+.header_contents .header-first-img {
     margin-top: 125px;
     width: 564px;
     height: 112px;
 }
 
-main {
+.header_contents .header-second-img {
+    width: 261px;
+    height: 265px;
+    transform: translateY(-170px);
+}
+
+.main_contents {
     position: relative;
 }
 
-main .main-first-img {
+.main_contents .main-first-img {
     margin-top: 46px;
     width: 486px;
     height: 40px;
+    position: static;
 }
 
-main .main-second-img {
+
+.main_contents .main-second-img {
     margin-top: 78px;
-    position: relative;
 }
 
-.main-first-sentence {
+ .main_contents .main-first-sentence {
     width:400px;
     height: 85px;
-    position: absolute;
-    top:0;
+    transform: translateY(-110px);
+    line-height: 30px;
+    font-weight: bold;
+    font-size:14px;
+}
+
+.main-first-sentence .main-first-sentence-strong {
+    font-size: 24px;
+}
+
+.main_contents .main_fir_p {
+    margin-bottom: 27px;
+    
+}
+
+.main_contents p input {
+    color: #BABCBE;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    width:228px;
+    height: 57px;
+
+}
+
+.main_contents .main_fir_p .first-input {
+
+}
+
+.main_contents .main_sec_p .second-input {
 
 }
