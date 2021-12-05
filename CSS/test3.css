@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+body {
+    background-color: #5B2386;
+    color:#fff;
+    font-size: 24px;
+}
+header, main, footer {
+    text-align: center;
+}
+/* 마진을 주고보니 바디의 상단이 뜸, display:inline-block으로 해결.  */
+.header_contents {
+    width: 100vw;
+    height: 265px;
+    text-align: center;
+    margin-top: 125px;
+    display: inline-block;
+}
+
+.header_contents .header_first_img {
+    display: inline-block;
+    width: 564px;
+    height: 112px;
+}
+
+.header_contents .header_second_img {
+    display: block;
+    width: 261px;
+    height: 265px;
+    margin:0 auto 0;
+    transform: translateY(-63%);
+}
+/* header의 margin-top에 125px을 주었는데 이게 아래 컨텐츠의 영향을줌.
+가상요소를 사용하지 않고, html로 사진을 두개 띄워서 display:block을 사용하여 세로배치를 하고, transform의 translate 속성으로 위치를 조정해 주고 보니, header의 높이는 컨텐츠를 두개를 합친 대략 951px정도가
+되어버렸다. 왜냐면 Y축으로 -63퍼센트롤 줘서 컨텐츠는 맞췃지만 컨텐츠 크기 자체는 남아있음. --> 해결방법은 그냥 header의 높이는 강제로 지정해버렸다. 재현쌤이 하지 말라는 방법인데, 만약 이렇게 하지 않을경우 main부터 계속 상단의 값을 계산하면서 레이아웃을 잡아야하는 번거로움이 생긴다. position도 같은 상황일꺼라 생각이 든다.  */
+
+.main_contents {
+    width: 100%;
+    height: auto;
+}
+
+.main_contents .main_first_img {
+    margin: 46px 0 78px;
+}
+
+.main_contents .main_contents_position {
+    width: 100%;
+    height: 96px;
+    position: relative;
+    text-align: center;
+}
+
+.main_contents .main_contents_position .main-second-img {
+    width: 510px;
+    height: 96px;
+}
+
+.main_contents .main_contents_position .main-first-sentence {
+    transform: translateY(-140%);
+}
+/* position:absolute 를 쓰려고 했으나 순식간에 레이아웃을 다 변형시켜버림, 그래서 그냥 translateY로 위치를 맞춰줌.  */
+
+.main_contents .main_fir_p {
+    margin-top: 78px;
+}
+
+.main_contents .main_fir_p .first-input {
+    font-size: 24px;
+    padding:12px 0;
+    border: none;
+    border-radius: 7px;
+    color:#BABCBE;
+    text-align: center;
+}

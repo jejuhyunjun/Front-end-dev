@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body, header ,main {
+body, main {
     background-color: #5B2386;
     display: flex;
     flex-direction: column;
@@ -10,8 +10,12 @@ body, header ,main {
     font-size: 24px;
 }
 
-.header_contents .header-first-img {
+header {
     margin-top: 125px;
+    text-align: center;
+}
+
+.header_contents .header-first-img {
     width: 564px;
     height: 112px;
 }
@@ -19,7 +23,7 @@ body, header ,main {
 .header_contents .header-second-img {
     width: 261px;
     height: 265px;
-    transform: translateY(-170px);
+    transform: translateX(-300px);
 }
 
 .main_contents {
