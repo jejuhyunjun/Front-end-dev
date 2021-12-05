@@ -61,14 +61,118 @@ header, main, footer {
 /* position:absolute 를 쓰려고 했으나 순식간에 레이아웃을 다 변형시켜버림, 그래서 그냥 translateY로 위치를 맞춰줌.  */
 
 .main_contents .main_fir_p {
-    margin-top: 78px;
+    margin: 78px 0 25px;
 }
 
-.main_contents .main_fir_p .first-input {
+.main_fir_p input::placeholder,
+.main_sec_p input::placeholder{
+    color:#BABCBE;
+    font-weight: bold;
+    /* ::placeholder 가상요소가 있다고 처음으로 알게됨. color는 input으로 주고 이 가상 요소는 사용자가 입력하기 전 보여주는 텍스트이다. 글자색상, 글자체 등등 변경이 가능하다.  */
+}
+
+.main_contents .main_fir_p .first-input,
+.main_contents .main_sec_p .second-input {
+    width: 228px;
+    height: 40px;
     font-size: 24px;
-    padding:12px 0;
+    padding:15px 20px;
     border: none;
     border-radius: 7px;
-    color:#BABCBE;
-    text-align: center;
+    color:black;
+}
+
+.main_contents .btn_result {
+    margin-top: 115px;
+    background-color: #FCEE21;
+    width: 565px;
+    height: 66px;
+    border: none;
+    border-radius: 56px;
+    font-size: 24px;
+    color: #5B2386;
+    font-weight: bold;
+    position: relative;
+}
+
+/* .main_contents .btn_result::after {
+    content: '';
+    display: block;
+    background-image: url(../img/Frame11.png);
+    width: 64px;
+    height: 72px;
+    position: relative;
+    left: 80px;
+    top:50px
+
+    이 코드는 가상요소로 이미지를 띄워서 position으로 위치를 옮기려 했으나 button의 중앙정렬을 해치기 때문에 포기했다.
+} */
+
+
+.btn_result+.checked {
+    position:relative;
+    top:50px;
+}
+
+.main_contents .result_first_data {
+    margin: 147px 0 17px 0;
+}
+
+.main_contents .result_second_data {
+    margin-bottom: 127px;
+
+}
+
+.main_contents .result_first_data .first_input_result {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    padding:0 10px;
+}
+
+.main_contents .result_second_data .second_input_result {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    padding:0 10px;
+}
+/* javascript로 결과값을 받을 span태그의 css요소는 대충 했으나, 상하의 중앙정렬에서 막힘. 원본 페이지를 보면 결과값을 받는 태그는 아래로 조금 내려간 형태이나, 구현하면 부모태그의 레이아웃이 바껴버림. */
+
+
+
+.main_contents .main_tranning {
+    width: 356px;
+    height: 66px;
+    background-color: #FCEE21;
+}
+
+.main_contents .main_share {
+    width: 191px;
+    height: 66px;
+    background-color: #fff;
+}
+
+.main_contents .main_tranning, .main_contents .main_share {
+    border: none;
+    border-radius: 56px;
+    font-size: 24px;
+    font-weight: bold;
+    color:#5B2386;
+    margin: 0 9px 0 0;
+}
+
+footer {
+    margin-top: 130px;
+}
+
+footer .footer_weniv {
+    width: 125px;
+    height: 25px;
+}
+
+footer .footer_small {
+    margin-top: 20px;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 100px;
 }
