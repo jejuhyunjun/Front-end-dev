@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* display:flex , column */
 body {
     background-color: #5B2386;
@@ -6,11 +8,7 @@ body {
     text-align: center;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
+} */
 
 a {
     text-decoration: none;
@@ -18,9 +16,6 @@ a {
 }
 
 .top_title {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     margin-top: 80px;
     align-items: center;
 
@@ -83,8 +78,10 @@ a {
 .programming_1 {
     margin-top: 80px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    /*첫번째 인풋의 상하레이아웃을 가운데로 맞춰줌.*/
+    justify-content: center; 
+    /* 첫번째 인풋의 좌우를 중앙정렬해줌. */
     width: 600px;
     height: 57px;
     font-size: 24px;
@@ -171,7 +168,9 @@ a {
 
 .tranning_time {
     display: flex;
-    align-items: center;
+    /* 태그들이 새로배치가 되어서 flex로 정렬해주었다. */
+    align-items: center; 
+    /* 위에 이슈와 동일한 컨텐츠들 끼리 상하레이아웃이 안맞아서 주었다. */
     margin-top: 30px;
     font-size: 24px;
     font-weight: 1000;
@@ -194,7 +193,7 @@ a {
     color:#5B2386;
     font-size: 24px;
     border-radius: 50px;
-    font-weight: 1000;
+    font-weight: bold;
 }
 
 #foot_btn_tranning a {
@@ -215,8 +214,8 @@ a {
 footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    /* weniv 로고가 왼쪽정렬이 되어서 사용했다. */
 }
 
 footer img {

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index.html , css 코드 설명</title>
+</head>
+<body>
+    <p>
+        내가 지적받았던 사항들. <br>
+        1. 너무 많은 div 태그  <br>
+        2. input 의 이름 label 태그의 사용부재 <br>
+        3. button 의 기본 타입은 submit이다. 타입을 button으로 변경할것. <br>
+        4. cite 태그를 잘못썻다. 내가 의도한 했던 태그는 small이였다. <br>
+        5. Javascript를 위한 result 값을 감싸는 태그를 p태그로 합쳐서 <br>
+        코드의 수를 줄일 수 있다.(굳이 나눌 필요가 없었음.) <br>
+        6.밸리데이 테스터에 4가지 정도의 문제가 있었음. <br>
+        7. main 안에 굳이 section태그를 써야했을까..? <br>
+    </p>
+    <pre>
+        <h1>index.css은 중앙정렬을</h1> 
+        1. display: flex; -> 부모의 넓이 만큼 flex-item들이 차곡차곡 쌓았다. (사실 column을 사용하기 위해 정렬하는 것이다. )
+        2. flex-derection: column; -> column 속성을 통해서 새로배치를 했다.
+        3. text-align:center; 를 주어 사실상 더이상은 중앙배치가 필요없겠지라고 생각하고 코딩을 시작했다. 
+
+        문제는 section태그가 위 3가지 태그를 안먹는다는 것이다. 
+        왜인지 아직도 모르겠다. body의 속성을 같이 줘봣는데도
+        따로 태그를 써줘야 중아정렬이 된다. 왜지,,,
+
+        .main_sentence도 .programming_2  마찬가지다. 
+
+        justify-content 는 브라우저와 컨텐츠의 공간을 정렬할때 사용한다. 
+        start, center, space-between, space-around, space-evenly 가 있다.
+
+        다시 정리하면서 느낀점. 
+        정말 코드의 레이아웃을 맞추기 급급했고, 가독성도 가성비도 없는
+        엉망진창의 코드라는 생각밖에 안들었다. 
+        
+    </pre>
+<hr>
+    <pre>
+        <h1>index_2.html</h1> 
+        코드양이 많이 줄었다. 
+        div 태그도 거의 사용하지 않았고, 본인 기준 정말 필요하다고 생각하는 태그만 사용했다. 이전에는 레이아웃을 위해 항상
+        개개인의 태그를 감싸는 큰 부모태그가 있어야 한다는 큰 착각을 
+        하고 있었는데 이번 리뷰로 완전히 바꼈다. 
+        이전에 지적받았던 사항들을 대부분 수정했다. 
+        그런데 img 태그의 alt에 관하여 너무 상세히 써도 좋지 않다고
+        설명을 들은것 같은데 잘 이해가 되지 않는다. 
+        접근성?을 위해서 그렇다는데 나중에 한번 더 물어보자.
+
+<hr>
+        <h1>test3.css</h1> 
+    이번의 중앙 정렬은 그냥 text-align:center;이다. 
+    이전 파일에서 안썻던 이유는 사실 이게 정말 중앙정렬인지 스스로 믿지
+    못해서 안썻던게 사실이다. ( 왜인지는 모르겠으나 레이아웃이 틀어질 수도 있다고 생각하고 있었음.)
+    Y축은 translate를 주로 썻고, position 을 사용한 부분도 있으나
+    translate을 주로 사용했다. 
+
+    사용한 코드들이 대부분 배운 내용이니 크게 어려운 부분은 없으나 
+    가상요소중 ::placeholder 가 너무 신기했다. 
+    input 태그의 사용자가 입력 전 띄우는 text인데 
+    원본 사이트를 보면 input태그 안에 글자를 입력하면 글자 색이 변경되는 것을 확인 할 수 있었다. 해당 부분을 재현하고 싶었는데 우연히 수업에서 가상요소를 사용하는것을 보고 검색중 알게된 사실. 
+    
+    추가로 재현쌤은 img태그의 관해서 background-image 나 
+    가상요소 ::after를 사용하셨다. 물론 똑같이 재현하고자 시도는 해봣으나 background-image에서 막혔다. 
+    사이즈도 안맞았고, 위치를 잡는것도 너무 어려웠다. 
+    가상요소를 사용해서 이미지를 띄우려고 했으나 왜인지 이미지 자체가 보이지 않는 기괴한 현상..? 고로 포기, 다른 방법으로 구현해보았다.
+    </pre>
+</body>
+</html>

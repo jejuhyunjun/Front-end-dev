@@ -9,6 +9,7 @@ header, main, footer {
     text-align: center;
 }
 /* 마진을 주고보니 바디의 상단이 뜸, display:inline-block으로 해결.  */
+
 .header_contents {
     width: 100vw;
     height: 265px;
@@ -40,36 +41,38 @@ header, main, footer {
 }
 
 .main_contents .main_first_img {
-    margin: 46px 0 78px;
-}
-
-.main_contents .main_contents_position {
-    width: 100%;
-    height: 96px;
-    position: relative;
-    text-align: center;
+    margin: 46px 0 156px;
 }
 
 .main_contents .main_contents_position .main-second-img {
-    width: 510px;
-    height: 96px;
+    width: 600px;
 }
 
-.main_contents .main_contents_position .main-first-sentence {
-    transform: translateY(-140%);
+.main_contents .main_contents_position 
+.main-first-sentence {
+    transform: translateY(-110%);
+    line-height: 40px;
+
 }
+
+.main_contents .main_contents_position 
+.main-first-sentence .main-first-sentence-strong {
+    font-size: 40px;
+}
+
 /* position:absolute 를 쓰려고 했으나 순식간에 레이아웃을 다 변형시켜버림, 그래서 그냥 translateY로 위치를 맞춰줌.  */
 
 .main_contents .main_fir_p {
-    margin: 78px 0 25px;
+    margin: 0 0 25px;
 }
 
 .main_fir_p input::placeholder,
 .main_sec_p input::placeholder{
     color:#BABCBE;
     font-weight: bold;
-    /* ::placeholder 가상요소가 있다고 처음으로 알게됨. color는 input으로 주고 이 가상 요소는 사용자가 입력하기 전 보여주는 텍스트이다. 글자색상, 글자체 등등 변경이 가능하다.  */
 }
+    /* ::placeholder 가상요소가 있다고 처음으로 알게됨. color는 input으로 주고 이 가상 요소는 사용자가 입력하기 전 보여주는 텍스트이다. 글자색상, 글자체 등등 변경이 가능하다.  */
+
 
 .main_contents .main_fir_p .first-input,
 .main_contents .main_sec_p .second-input {
